@@ -1,0 +1,26 @@
+# train: ../train/images
+# val: ../valid/images
+# test: ../test/images
+
+# nc: 5
+# names: ['five', 'four', 'one', 'three', 'two']
+
+# roboflow:
+#   workspace: lebanese-university-grkoz
+#   project: hand-gesture-recognition-y5827
+#   version: 5
+#   license: CC BY 4.0
+#   url: https://universe.roboflow.com/lebanese-university-grkoz/hand-gesture-recognition-y5827/dataset/5
+
+
+# Create configuration
+config = {/home/tricubics/Desktop/Yolo-Hand-Detection/yolov8_hand_detection/hand_gesture_dataset",
+   "train": "train",
+   "val": "valid",
+   "test": "test",
+   "nc": 5,
+   "names": ['five', 'four', 'one', 'three', 'two']
+  }
+
+with open("hand_gesture_dataset/data.yaml", "w") as file:
+   yaml.dump(config, file, default_flow_style=False)
